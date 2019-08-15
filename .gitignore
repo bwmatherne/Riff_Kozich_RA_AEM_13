@@ -4,6 +4,10 @@
 
 .DS_Store
 
+StabilityWMetaG.tar
+selected
+data/mothur/README.md
+code/mothur/*
 data/*/*
 !data/process/*
 !README.md
