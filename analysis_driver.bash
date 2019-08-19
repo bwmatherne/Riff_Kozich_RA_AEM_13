@@ -30,3 +30,16 @@ rm Trainset14_032015.pds.tgz
 # Generate a customized version of the SILVA v4 reference dataset
 code/mothur/mothur "#pcr.seqs(fasta=data/references/silva.seed.align, start=11894, end=25319, keepdots=F, processors=8)"
 mv data/references/silva.seed.pcr.align data/references/silva.v4.align
+
+# Run motur through the data curation steps
+code/mothur/mothur code/get_good_seqs.batch
+	# The following are the error messages after running the command above
+		##mothur > filter.seqs(fasta=current, vertical=T, trump=.)
+		##Using data/mothur/stability.trim.contigs.good.unique.good.align as input file for the fasta parameter.
+
+		##Using 8 processors.
+		##[ERROR]: data/mothur/stability.trim.contigs.good.unique.good.align is blank. Please correct.
+		##Creating Filter... 
+		##[ERROR]: data/mothur/stability.trim.contigs.good.unique.good.align is blank. Please correct.
+		##Error in reading your fastafile, at position -1. Blank name.
+		##It took 0 secs to create filter for 0 sequences.
