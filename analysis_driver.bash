@@ -6,9 +6,11 @@
 # * Opened files and moved to data/raw/
 # * Removed archive file
 
-wget https://www.mothur.org/MiSeqDevelopmentData/StabilityWMetaG.tar
+wget --no-check-certificate https://www.mothur.org/MiSeqDevelopmentData/StabilityWMetaG.tar
 tar xvf StabilityWMetaG.tar -C data/raw/
 rm StabilityWMetaG.tar
+		## Added above "--no-check-certificate" and will rerun everything
+
 
 ## How to get references files needed for this tutorial
 
