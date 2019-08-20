@@ -23,9 +23,12 @@ rm Silva.seed_v123.tgz silva.seed_v123.*
 rm mothur.*.logfile
 wget -N http://www.mothur.org/w/images/8/88/Trainset14_032015.pds.tgz
 tar xvzf Trainset14_032015.pds.tgz
-mv trainset14_032015.pds/trainset* data/references/
+mv trainset14_032015.pds/train* data/references/
 rm -rf trainset14_032015.pds
 rm Trainset14_032015.pds.tgz
+
+## Above the line appeared to have an error showing "mv trainset14_032015.pds/trainset* data/references/"
+### Ran using corrected file name and there was an error about a file not existing.
 
 # Generate a customized version of the SILVA v4 reference dataset
 code/mothur/mothur "#pcr.seqs(fasta=data/references/silva.seed.align, start=11894, end=25319, keepdots=F, processors=8)"
@@ -43,3 +46,12 @@ code/mothur/mothur code/get_good_seqs.batch
 		##[ERROR]: data/mothur/stability.trim.contigs.good.unique.good.align is blank. Please correct.
 		##Error in reading your fastafile, at position -1. Blank name.
 		##It took 0 secs to create filter for 0 sequences.
+
+	# Ran after retrying with trainset file name error correct. The following message was displayed at the end of the run:
+		##mothur > pre.cluster(fasta=current, count=current, diffs=2, processors=4)
+		##[WARNING]: no file was saved for count parameter.
+		##Using data/mothur/stability.trim.contigs.good.unique.good.filter.unique.fasta as input file for the fasta parameter.
+
+		##Using 4 processors.
+		##[WARNING]: This command can take a namefile and you did not provide one. The current namefile is data/mothur/stability.trim.contigs.good.unique.good.filter.names which seems to match data/mothur/stability.trim.contigs.good.unique.good.filter.unique.fasta.
+		##Segmentation fault (core dumped)
