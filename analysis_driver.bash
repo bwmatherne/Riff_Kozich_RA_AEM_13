@@ -16,7 +16,7 @@ rm StabilityWMetaG.tar
 
 # Files for Silva and RDP can be found on the mothur website:
 wget https://www.mothur.org/MiSeqDevelopmentData/HMP_MOCK.fasta
-mv HMP_MOCK.fasta data/references/
+mv HMP_MOCK.fasta data/references/HMP_MOCK.v4.fasta
 
 wget http://mothur.org/w/images/1/15/Silva.seed_v123.tgz
 tar xvzf Silva.seed_v123.tgz silva.seed_v123.align silva.seed_v123.tax
@@ -39,7 +39,7 @@ rm Trainset14_032015.pds.tgz
 code/mothur/mothur "#pcr.seqs(fasta=data/references/silva.seed.align, start=11894, end=25319, keepdots=F, processors=8)"
 mv data/references/silva.seed.pcr.align data/references/silva.v4.align
 
-# Run motur through the data curation steps
+# Run mothur through the data curation steps
 code/mothur/mothur code/get_good_seqs.batch
 	# The following are the error messages after running the command above
 		##mothur > filter.seqs(fasta=current, vertical=T, trump=.)
