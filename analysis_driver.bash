@@ -58,3 +58,9 @@ code/mothur/mothur code/get_good_seqs.batch
 		##Using 4 processors.
 		##[WARNING]: This command can take a namefile and you did not provide one. The current namefile is data/mothur/stability.trim.contigs.good.unique.good.filter.names which seems to match data/mothur/stability.trim.contigs.good.unique.good.filter.unique.fasta.
 		##Segmentation fault (core dumped)
+
+
+# Going to attemp to run the next steps but it appears that the get_good_seqs.batch step did not run properly
+
+# Run mock community data with the seq.error step to determine sequencing error rate
+code/mothur/mothur code/get_error.batch
