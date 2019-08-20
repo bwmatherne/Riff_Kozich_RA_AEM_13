@@ -13,6 +13,9 @@ rm StabilityWMetaG.tar
 ## How to get references files needed for this tutorial
 
 # Files for Silva and RDP can be found on the mothur website:
+wget https://www.mothur.org/MiSeqDevelopmentData/HMP_MOCK.fasta
+mv HMP_MOCK.fasta data/references/
+
 wget http://mothur.org/w/images/1/15/Silva.seed_v123.tgz
 tar xvzf Silva.seed_v123.tgz silva.seed_v123.align silva.seed_v123.tax
 code/mothur/mothur "#get.lineage(fasta=silva.seed_v123.align, taxonomy=silva.see
