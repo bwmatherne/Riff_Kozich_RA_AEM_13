@@ -18,14 +18,13 @@ rm StabilityWMetaG.tar
 wget https://www.mothur.org/MiSeqDevelopmentData/HMP_MOCK.fasta
 mv HMP_MOCK.fasta data/references/HMP_MOCK.v4.fasta
 
-wget http://mothur.org/w/images/1/15/Silva.seed_v123.tgz
+wget -N  http://mothur.org/w/images/1/15/Silva.seed_v123.tgz
 tar xvzf Silva.seed_v123.tgz silva.seed_v123.align silva.seed_v123.tax
-code/mothur/mothur "#get.lineage(fasta=silva.seed_v123.align, taxonomy=silva.see
-d_v123.tax, taxon=Bacteria);degap.seqs(fasta=silva.seed_v123.pick.align, process
-ors=8)"
+code/mothur/mothur "#get.lineage(fasta=silva.seed_v123.align, taxonomy=silva.seed_v123.tax, taxon=Bacteria);degap.seqs(fasta=silva.seed_v123.pick.align, processors=8)"
 mv silva.seed_v123.pick.align data/references/silva.seed.align
 rm Silva.seed_v123.tgz silva.seed_v123.*
 rm mothur.*.logfile
+
 wget -N http://www.mothur.org/w/images/8/88/Trainset14_032015.pds.tgz
 tar xvzf Trainset14_032015.pds.tgz
 mv trainset14_032015.pds/train* data/references/
