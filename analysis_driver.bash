@@ -15,9 +15,7 @@ rm StabilityWMetaG.tar
 ## How to get references files needed for this tutorial
 
 # Files for Silva and RDP can be found on the mothur website:
-wget https://www.mothur.org/MiSeqDevelopmentData/HMP_MOCK.fasta
-mv HMP_MOCK.fasta data/references/HMP_MOCK.v4.fasta
-
+# * Make sure that there is no text wrapping on the screen if you are going to copy and paste the commands
 wget -N  http://mothur.org/w/images/1/15/Silva.seed_v123.tgz
 tar xvzf Silva.seed_v123.tgz silva.seed_v123.align silva.seed_v123.tax
 code/mothur/mothur "#get.lineage(fasta=silva.seed_v123.align, taxonomy=silva.seed_v123.tax, taxon=Bacteria);degap.seqs(fasta=silva.seed_v123.pick.align, processors=8)"
@@ -27,7 +25,7 @@ rm mothur.*.logfile
 
 wget -N http://www.mothur.org/w/images/8/88/Trainset14_032015.pds.tgz
 tar xvzf Trainset14_032015.pds.tgz
-mv trainset14_032015.pds/train* data/references/
+mv trainset14_032015.pds/trainset* data/references/
 rm -rf trainset14_032015.pds
 rm Trainset14_032015.pds.tgz
 
@@ -67,6 +65,10 @@ code/mothur/mothur code/get_good_seqs.batch
 # Going to attemp to run the next steps but it appears that the get_good_seqs.batch step did not run properly
 
 # Run mock community data with the seq.error step to determine sequencing error rate
+	##HMP_MOCK.v4.fasta file may need to be downloaded 
+wget https://www.mothur.org/MiSeqDevelopmentData/HMP_MOCK.fasta
+mv HMP_MOCK.fasta data/references/HMP_MOCK.v4.fasta
+
 code/mothur/mothur code/get_error.batch
 
 		## Received the following error message:
