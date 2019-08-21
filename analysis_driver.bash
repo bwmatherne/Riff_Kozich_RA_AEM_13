@@ -62,6 +62,16 @@ code/mothur/mothur code/get_good_seqs.batch
 			####Error in reading your fastafile, at position -1. Blank name.
 			####It took 0 secs to create filter for 0 sequences.
 
+#Made changes according to info in tutorials, and received the following error:
+
+			#mothur > pre.cluster(fasta=current, count=current, diffs=2, processors=4)
+			#[WARNING]: no file was saved for count parameter.
+			#Using data/mothur/stability.trim.contigs.good.unique.good.filter.unique.fasta as input file for the fasta parameter.
+
+			#Using 4 processors.
+			#[WARNING]: This command can take a namefile and you did not provide one. The current namefile is data/mothur/stability.trim.contigs.good.unique.good.filter.names which seems to match data/mothur/stability.trim.contigs.good.unique.good.filter.unique.fasta.
+			#Segmentation fault (core dumped)
+
 # Going to attemp to run the next steps but it appears that the get_good_seqs.batch step did not run properly
 
 # Run mock community data with the seq.error step to determine sequencing error rate
