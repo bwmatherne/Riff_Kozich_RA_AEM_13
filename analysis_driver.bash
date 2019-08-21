@@ -5,6 +5,7 @@
 # * Downloaded raw data
 # * Opened files and moved to data/raw/
 # * Removed archive file
+# **** Make sure that there is a complete download
 
 wget --no-check-certificate https://www.mothur.org/MiSeqDevelopmentData/StabilityWMetaG.tar
 tar xvf StabilityWMetaG.tar -C data/raw/
