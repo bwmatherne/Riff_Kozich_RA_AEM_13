@@ -90,3 +90,10 @@ code/mothur/mothur code/get_error.batch
 			#You have no current fasta file and the fasta parameter is required.
 			#[ERROR]: did not complete seq.error.
 
+		## After correcting get_good_seqs step, this command gave a processors error message.
+				# Corrected this issue by removing the processors= option on the last step of the batch file
+
+
+# Cluster processed data and create a shared file
+code/mothur/mothur code/get_shared_otus.batch
+
