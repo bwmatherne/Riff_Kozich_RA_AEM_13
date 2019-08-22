@@ -97,3 +97,5 @@ code/mothur/mothur code/get_error.batch
 # Cluster processed data and create a shared file
 code/mothur/mothur code/get_shared_otus.batch
 
+# Generate data to plot nmds ordination
+code/mothur/mothur code/get_nmds_data.batch 
