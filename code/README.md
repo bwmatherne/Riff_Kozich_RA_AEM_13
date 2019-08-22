@@ -16,3 +16,7 @@ To verify the mothur software verion:
 ```bash
 code/mothur/mothur -v
 ```
+#Modified count.seqs command in get_good_seqs.batch 
+* Original: mothur > count.seqs(name=current, group=current, processors=4)
+* New: mothur > count.seqs(name=current, group=current)
+These instructions were provided by Dr. Schloss and allowed the command to run correctly.
