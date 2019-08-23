@@ -103,3 +103,5 @@ code/mothur/mothur code/get_nmds_data.batch
 # Calculate the number of OTUs for each sample when rarefying to 3000 sequences
 code/mothur/mothur code/get_sobs_data.batch 
 
+# Construct NMDS png file
+R -e "source('code/plot_nmds.R'); plot_nmds('data/mothur/stability.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.pick.opti_mcc.thetayc.0.03.lt.ave.nmds.axes')"
