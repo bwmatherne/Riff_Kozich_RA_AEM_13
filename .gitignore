@@ -11,6 +11,7 @@ code/mothur/*
 data/*/*
 !data/process/*
 !README.md
+submission/practice_cache/
 
 *.qsub*
 mothur*logfile
